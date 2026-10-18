@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you refer to this result, please cite the write-up."
+title: "rc2-pi-tables: RC2's PITABLE and version table rebuilt from the digits of pi"
+version: "1.1"
+abstract: "Both permutations in RFC 2268 (PITABLE and the RC2Version table) are reproduced exactly by a Fisher-Yates shuffle driven by the decimal digits of pi, reading three digits per draw with rejection sampling."
+authors:
+  - family-names: Hamadeh
+    given-names: Khalid
+date-released: 2026-10-18
+license: MIT
+repository-code: "https://github.com/khalid-hamadeh/rc2-pi-tables"
+url: "https://khalidhamadeh.com/writing/rc2-pi-table"
+preferred-citation:
+  type: article
+  title: "How RC2's π table was made"
+  authors:
+    - family-names: Hamadeh
+      given-names: Khalid
+  year: 2026
+  url: "https://khalidhamadeh.com/writing/rc2-pi-table"

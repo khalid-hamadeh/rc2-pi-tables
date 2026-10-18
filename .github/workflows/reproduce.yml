@@ -1,0 +1,16 @@
+name: reproduce
+on: [push, pull_request, workflow_dispatch]
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Rebuild both tables from pi and compare with the tables in this repo
+        run: python3 reproduce.py
+      - name: Compare with a fresh copy of RFC 2268 from rfc-editor.org
+        run: |
+          curl -sSf https://www.rfc-editor.org/rfc/rfc2268.txt -o rfc2268.txt
+          python3 reproduce.py rfc2268.txt
